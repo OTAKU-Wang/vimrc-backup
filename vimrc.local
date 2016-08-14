@@ -1,0 +1,13 @@
+"vim-airline settings"
+let g:airline_theme="luna" 
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+nnoremap <C-r> :bn<CR>
+nnoremap <C-w> :bp<CR>
+
+"使用gui打开现在编辑的文件
+:nmap <F5> :w <Bar> !open %
+
+"setting GUI fonts
+set guifont=Cousine_for_Powerline:h14

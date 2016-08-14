@@ -1,0 +1,87 @@
+set nocompatible              " required
+filetype off                  " required
+set number
+
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+    
+syntax enable
+colorscheme solarized
+set background=dark
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+Plugin 'tmhedberg/SimpylFold'
+set foldmethod=indent
+
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+map <C-n> :NERDTreeToggle<CR>
+autocmd vimenter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeMinimalUI=1
+
+Plugin 'Valloric/YouCompleteMe'
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_key_invoke_completion = '<C-a>'
+
+
+Plugin 'kien/ctrlp.vim'
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip     
+let g:ctrlp_custom_ignore = {'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$'}
+
+set clipboard=unnamed
+set pastetoggle=<F2>
+
+Plugin 'vim-airline/vim-airline'
+let g:airline#extensions#tabline#enabled = 1
+Plugin 'vim-airline/vim-airline-themes'
+
+
+Plugin 'scrooloose/nerdcommenter'   " commenter: \cc \cu
+let mapleader=';'
+
+Plugin 'vim-scripts/loremipsum' 
+inoremap Lorem <Esc><Esc>:Loremipsum 20<CR>
+inoremap Ipsum <Esc><Esc>:Loremipsum 70<CR>
+
+Plugin 'Chiel92/vim-autoformat'
+
+Plugin 'mattn/emmet-vim'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key='<c-y>'
+let g:user_emmet_mode='a'
+autocmd filetype *html* imap <c-_> <c-y>/
+autocmd filetype *html* map <c-_> <c-y>/
+
+Plugin 'hail2u/vim-css3-syntax' 
+
+Plugin 'groenewege/vim-less'
+
+Plugin 'Raimondi/delimitMate'
+
+let g:ycm_semantic_triggers = {
+    \   'css': [ 're!^\s{4}', 're!:\s+'],
+    \   'html': [ '</','"','<',' ' ],
+    \   'javascript': ['.', 're!(?=[a-zA-Z]{3,4})'],
+    \ }
+
+Plugin 'pangloss/vim-javascript'
+let javascript_enable_domhtmlcss = 1
+
+Plugin 'nathanaelkane/vim-indent-guides'
+
+Plugin 'marijnh/tern_for_vim'
+
+Plugin 'scrooloose/syntastic'
+
+
