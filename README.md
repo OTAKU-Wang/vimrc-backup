@@ -4,7 +4,7 @@ vim配置文件备份
 
 # 效果图
 
-![]("https://github.com/OTAKU-Wang/vimrc-backup/blob/master/img/result.png")
+![]("https://raw.githubusercontent.com/OTAKU-Wang/vimrc-backup/master/img/result.png")
 
 # 使用说明
 
