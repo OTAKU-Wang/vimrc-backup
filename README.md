@@ -16,3 +16,5 @@ vim配置文件备份
 - [markdown](https://github.com/suan/vim-instant-markdown)预览插件，当打开md文件的时候，游览器会自动打开并显示内容.(本插件只针对mac和linux起作用)
 - 设置了gvim的默认字体为power-font
 - 设置了[vim-airline](https://github.com/vim-airline/vim-airline)的主题
+- 添加了[tern_for_vim](https://github.com/ternjs/tern_for_vim)来实现对js的自动补全功能
+
