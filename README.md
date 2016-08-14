@@ -24,4 +24,4 @@ vim配置文件备份
 - 设置了gvim的默认字体为power-font
 - 设置了[vim-airline](https://github.com/vim-airline/vim-airline)的主题
 - 添加了[tern_for_vim](https://github.com/ternjs/tern_for_vim)来实现对js的自动补全功能
-
+- 添加了使用系统剪贴板的设置(可能只有在mac下才能生效)
