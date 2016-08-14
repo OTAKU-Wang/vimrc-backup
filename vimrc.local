@@ -11,3 +11,6 @@ nnoremap <C-w> :bp<CR>
 
 "setting GUI fonts
 set guifont=Cousine_for_Powerline:h14
+
+"设置mac下的剪切版
+set clipboard=unnamed
