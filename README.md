@@ -1,7 +1,13 @@
 # vimrc-backup
+
 vim配置文件备份
 
+# 效果图
+
+![]("https://github.com/OTAKU-Wang/vimrc-backup/blob/master/img/result.png")
+
 # 使用说明
+
 > 本配置是在mac下的，windows下能否使用并没有测试
 需要注意的是配置中的部分插件需要下载power-fonts字体
 
@@ -10,6 +16,7 @@ vim配置文件备份
 - 启动vim，输入:PluginInstall
 
 # 说明
+
 项目是从[spf13](https://github.com/spf13/spf13-vim) fork下来的。其中做了部分设置主要添加了如下内容：
 
 - 使用F5打开文件预览（mac下默认的文件打开方式）
